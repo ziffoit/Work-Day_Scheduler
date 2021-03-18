@@ -14,7 +14,7 @@ function dateAndTime() {
 setInterval(dateAndTime, 1000)
 
 function savedSchedule() {
-    timeBlock.each(function() {
+    $('.time-block').each(function() {
         var id = $(this).attr('id')
         var task = localStorage.getItem(id)
         if (task != 'null') {
@@ -33,16 +33,4 @@ saveBtn.on('click', function() {
 
 function colorChange() {
     currentTime = today.hours()
-    timeBlock.each(function() {
-        var currentHour = parseInt($(this).attr('id'))
-        if (currentHour > currentTime) {
-            $(this).addClass('future')
-        } else if (currentHour === currentTime) {
-            $(this).addClass('present')
-        } else {
-            $(this).addClass('past')
-        }
-    })
 }
-
-colorChange()
