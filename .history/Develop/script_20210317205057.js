@@ -2,8 +2,6 @@ var schedule = $('.description')
 var saveBtn = $('.saveBtn')
 var timeBlock = $('.time-block')
 var currentDay = $('#currentDay')
-var today = moment()
-var currentTime = moment().hours()
 
 
 function dateAndTime() {
@@ -23,14 +21,9 @@ function savedSchedule() {
     })
 }
 
-savedSchedule()
-
 saveBtn.on('click', function() {
     var hour = $(this).parent().attr('id')
     var task = $(this).siblings('.description').val()
     localStorage.setItem(hour, task)
 })
 
-function colorChange() {
-    currentTime
-}
