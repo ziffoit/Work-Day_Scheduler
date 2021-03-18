@@ -15,4 +15,3 @@ saveBtn.on('click', function() {
     var task = $(this).sibling('.description').val()
     localStorage.setItem(hour, task)
 })
-

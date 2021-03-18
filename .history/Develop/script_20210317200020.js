@@ -1,6 +1,5 @@
 var schedule = $('.description')
 var currentDay = $('#currentDay')
-var saveBtn = $('.saveBtn')
 
 
 function dateAndTime() {
@@ -9,10 +8,4 @@ function dateAndTime() {
 }
 
 setInterval(dateAndTime, 1000)
-
-saveBtn.on('click', function() {
-    var hour = $(this).parent().attr('id')
-    var task = $(this).sibling('.description').val()
-    localStorage.setItem(hour, task)
-})
 
